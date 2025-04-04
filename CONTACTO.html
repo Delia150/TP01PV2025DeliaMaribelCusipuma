@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>contacto</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header id="contac">
     
+    <h1>Contacto</h1>
+</header>
+<div class="container"><img src="imagenes/contacto.jpeg" alt="Logo de la empresa" class="logo"></div>
+<nav class="menu-principal">
+<ul>
+    <li><a href="index.html">Nosotros</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Contacto</a></li>
+</ul>
+</nav>
+<main>
+    <form id="contact-form">
+        <label id="labelApellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <label for="pais">Pais: </label>
+        <select id="pais" name="pais" multiple>
+          <option value="arg">Argentina</option>
+        <option value="eu">Estados Unidos</option>
+          <option value="mex">Mexico</option>
+        </select>
+        <button type="submit" onclick="enviarFormulario()">Enviar</button>
+    </form>
+
+</main>
+<footer id="contacto">
+<p>&copy; 2025 Empresa fiscal S.A - todo lo derechos reservados.</p>
+</footer>
+
+   <script>
+
+     function enviarFormulario() {
+        event.preventDefault();
+        var apellido = document.getElementById(apellido).value;
+        var nombre = document.getElementById(nombre).value;
+
+        console.log("Nombre:", nombre);
+        console.log("Apellido:", apellido);
+        alert("nombre: "+nombre+" y apellido: "+apellido);
+      }
+   </script>
 </body>
 </html>
