@@ -34,25 +34,33 @@
         <option value="eu">Estados Unidos</option>
           <option value="mex">Mexico</option>
         </select>
-        <button type="submit" onclick="enviarFormulario()">Enviar</button>
+    
+        <button type="submit" onclick="enviarFormulario(event)">Enviar</button>
+
     </form>
 
 </main>
 <footer id="contacto">
-<p>&copy; 2025 Empresa fiscal S.A - todo lo derechos reservados.</p>
+<p>&copy; 2025 Empresa Argentina  - costumbre y hermosas tradciones Argentina .</p>
 </footer>
 
-   <script>
+<script>
+  function enviarFormulario(event) {
+    event.preventDefault(); // Previene el envío por defecto
 
-     function enviarFormulario() {
-        event.preventDefault();
-        var apellido = document.getElementById(apellido).value;
-        var nombre = document.getElementById(nombre).value;
+    // Tomar los valores del formulario
+    var apellido = document.getElementById("apellido").value;
+    var nombre = document.getElementById("nombre").value;
 
-        console.log("Nombre:", nombre);
-        console.log("Apellido:", apellido);
-        alert("nombre: "+nombre+" y apellido: "+apellido);
-      }
-   </script>
+    // Mostrar en consola y en alerta
+    console.log("Nombre:", nombre);
+    console.log("Apellido:", apellido);
+    alert("Nombre: " + nombre + " y Apellido: " + apellido);
+
+    // Enviar el formulario manualmente
+    document.getElementById("contact-form").submit();
+  }
+</script>
+
 </body>
 </html>

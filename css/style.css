@@ -198,13 +198,18 @@ iframe {
     height: 50px;
   }
   
+
+
   .menu-principal ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
+    height: 100%; 
   }
+  
   
   .menu-principal ul li {
     margin: 0 20px;
@@ -223,3 +228,15 @@ iframe {
     border-radius: 5px;
   }
   
+
+
+
+  #contact-form {
+    margin-top: 20px;  
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
